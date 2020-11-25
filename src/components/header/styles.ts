@@ -12,8 +12,21 @@ export const Header = styled.div`
   padding: 1rem;
 
   img{
-    margin-left: 10rem;
-    height: 90%;
+    margin-left: 1rem;
+    height: 80%;
+  }
+
+  .Toggle{
+    display: none;
+    margin: 0 35px;
+    align-items: center;
+  }
+
+  .four, .one, .three, .two {
+    width: 40px;
+    height: 6px;
+    margin: 6px 0;
+    background-color: #fff;
   }
 
   nav{
@@ -36,6 +49,24 @@ export const Header = styled.div`
         border-bottom: .3rem solid #1abc9c;
       }
     }
+  }
+
+  @media (max-width: 420px) {
+
+    img{
+      margin-left: .8rem;
+      height: 75%;
+    }
+    nav{
+      display: none;
+    }
+
+    .Toggle{
+      display: block;
+      margin: 0 25px;
+      align-items: center;
+    }
+
   }
 
 

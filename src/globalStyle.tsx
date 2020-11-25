@@ -40,5 +40,14 @@ export default createGlobalStyle`
 
     }
 
+    @media (max-width: 420px) {
+
+      p{
+        font-size: 90%;
+        line-height: 1.2rem;
+      }
+
+    }
+
 
 `;

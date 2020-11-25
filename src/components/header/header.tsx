@@ -15,6 +15,13 @@ const Home = function () {
         <a href='#'>Login</a>
       </nav>
 
+      <div className="Toggle">
+        <div className="one"></div>
+        <div className="two"></div>
+        <div className="three"></div>
+        <div className="four"></div>
+      </div>
+
     </Header>
   )
 }
