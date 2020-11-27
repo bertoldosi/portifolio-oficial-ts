@@ -77,18 +77,11 @@ export const Context = styled.div`
   }
 `
 
-export const Sobre = styled.div`
-  background-color: white;
-  border-radius: .5rem;
-  margin-top: 0;
-  padding: 2rem 2rem 5rem 2rem;
-  box-shadow: 0 0 1em #2c3e50;
-`
 
 export const Card = styled.div`
   background-color: white;
   border-radius: .5rem;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 2rem 2rem 5rem 2rem;
   box-shadow: 0 0 1em #2c3e50;
 
@@ -103,7 +96,7 @@ export const Card = styled.div`
 
 
     a{
-      padding: 0 0 0 .5rem ;
+      padding: 0 .5rem 0 .5rem ;
       transition: 1s;
 
       :hover{

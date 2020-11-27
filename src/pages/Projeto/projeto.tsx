@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Header from '../../components/header/header';
+import Container from '../../components/projeto/container/Container'
+
 
 const Projeto = function () {
-    return (
-        <h1>Projeto</h1>
-    )
+
+  return (
+    <>
+      <Header />
+      <Container />
+    </>
+  )
 }
 
 export default Projeto;

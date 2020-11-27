@@ -18,6 +18,10 @@ export default createGlobalStyle`
          color: #313030;
      }
 
+     a{
+      color: #313030;
+     }
+
      input{
       cursor: pointer;
      }
