@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/bertoldosi/portifolio-oficial-ts/precache-manifest.7c6fb1c54c9f8cd28859eb224224f967.js"
+  "/bertoldosi/portifolio-oficial-ts/precache-manifest.4d3bf4bfe2726686edc464f18a633e9f.js"
 );
 
 self.addEventListener('message', (event) => {
