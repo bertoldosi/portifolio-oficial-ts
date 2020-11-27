@@ -2,7 +2,7 @@
   "name": "portifolio-oficial-ts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/bertoldosi/portifolio-oficial-ts",
+  "homepage": "https://github.com/bertoldosi/portifolio-oficial-ts/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
