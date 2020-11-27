@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/bertoldosi/portifolio-oficial-ts/static/js/main.3511e6b6.chunk.js",
+    "main.js.map": "/bertoldosi/portifolio-oficial-ts/static/js/main.3511e6b6.chunk.js.map",
+    "runtime-main.js": "/bertoldosi/portifolio-oficial-ts/static/js/runtime-main.3c5e5f38.js",
+    "runtime-main.js.map": "/bertoldosi/portifolio-oficial-ts/static/js/runtime-main.3c5e5f38.js.map",
+    "static/js/2.fc292b23.chunk.js": "/bertoldosi/portifolio-oficial-ts/static/js/2.fc292b23.chunk.js",
+    "static/js/2.fc292b23.chunk.js.map": "/bertoldosi/portifolio-oficial-ts/static/js/2.fc292b23.chunk.js.map",
+    "index.html": "/bertoldosi/portifolio-oficial-ts/index.html",
+    "precache-manifest.7c6fb1c54c9f8cd28859eb224224f967.js": "/bertoldosi/portifolio-oficial-ts/precache-manifest.7c6fb1c54c9f8cd28859eb224224f967.js",
+    "service-worker.js": "/bertoldosi/portifolio-oficial-ts/service-worker.js",
+    "static/js/2.fc292b23.chunk.js.LICENSE.txt": "/bertoldosi/portifolio-oficial-ts/static/js/2.fc292b23.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/bertoldosi/portifolio-oficial-ts/static/media/logo.060f60f6.png",
+    "static/media/profile.jpeg": "/bertoldosi/portifolio-oficial-ts/static/media/profile.7ee69812.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3c5e5f38.js",
+    "static/js/2.fc292b23.chunk.js",
+    "static/js/main.3511e6b6.chunk.js"
+  ]
+}
