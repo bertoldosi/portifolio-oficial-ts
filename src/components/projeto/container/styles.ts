@@ -21,50 +21,6 @@ export const Container = styled.div`
 
 `
 
-export const Profiler = styled.div`
-  width: 250px;
-  height: min-content;
-  background-color: white;
-  border-radius: .5rem;
-  padding: 2rem 0 5rem 0;
-  margin: 0 1rem 1rem 1rem;
-  box-shadow: 0 0 1em #2c3e50;
-
-  div{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    img{
-      width: 150px;
-      margin: 0 1rem 0 1rem;
-      border-radius: 50%;
-    }
-
-    button{
-      background-color: #1abc9c;
-      width: 70%;
-      padding: .5rem;
-      margin: 2rem 0 2rem 0;
-      border: none;
-      border-radius: .2rem;
-      cursor: pointer;
-      font-weight: 500;
-      color: #313030;
-    }
-  }
-
-  @media (max-width: 420px) {
-    width: 90%;
-    background-color: white;
-    padding: 2rem 0 5rem 0;
-
-  }
-
-`
-
 export const Context = styled.div`
   width: 70%;
 
@@ -76,7 +32,6 @@ export const Context = styled.div`
     width: 90%;
   }
 `
-
 
 export const Card = styled.div`
   background-color: white;
@@ -129,4 +84,28 @@ export const Card = styled.div`
     }
     }
   }
+`
+
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+
+  .c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #1abc9c;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 `

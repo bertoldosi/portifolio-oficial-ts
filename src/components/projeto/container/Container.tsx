@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Perfil from '../../../assets/profile.jpeg'
 import Baner from '../../baner';
 import Footer from '../../footer';
-import { Container, Profiler, Context, Card } from './styles'
+import Profiler from '../../profiler';
+
+import { Container, Context, Card, Loading } from './styles'
 import api from '../../../services/api'
+
 
 
 interface Repositorys {
@@ -29,29 +31,30 @@ const Home = function () {
   return (
     <>
       <Container>
-        <Profiler>
-          <div>
-            <img src={Perfil} alt='perfil'></img>
-            <h1>Matheus Bertoldo</h1>
-            <h2>Desenvolvedor FrontEnd</h2>
-            <button>Baixar CV</button>
-          </div>
-        </Profiler>
+      <Profiler />
         <Context>
+          {repositorys ? (
+            <Card>
+              <h1>Projetos</h1>
 
-          <Card>
-            <h1>Projetos</h1>
-            <div>
-              {repositorys ? (
-                repositorys.map((repos) => (
-                  <a key={repos.id} href={repos.html_url} target='blank'>
-                    <h2>{repos.name}</h2>
-                    <p>{repos.description}</p>
-                  </a>
-                ))
-              ) : (<h1>Não tem</h1>)}
-            </div>
-          </Card>
+              <div>
+                {
+                  repositorys.map((repos) => (
+                    <a key={repos.id} href={repos.html_url} target='blank'>
+                      <h2>{repos.name}</h2>
+                      <p>{repos.description}</p>
+                    </a>
+                  ))
+                }
+              </div>
+            </Card>
+          ) : (
+              <Loading>
+                <div className='c-loader'>
+
+                </div>
+              </Loading>
+            )}
         </Context>
       </Container>
       <Baner />

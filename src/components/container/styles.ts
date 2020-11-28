@@ -47,12 +47,25 @@ export const Profiler = styled.div`
       background-color: #1abc9c;
       width: 70%;
       padding: .5rem;
-      margin: 2rem 0 2rem 0;
+      margin: 2rem 0 1rem 0;
       border: none;
       border-radius: .2rem;
       cursor: pointer;
       font-weight: 500;
       color: #313030;
+    }
+
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+
+    svg{
+      margin-right: .1rem;
     }
   }
 

@@ -60,7 +60,7 @@ export const LoginCss = styled.div`
         button{
           padding: .6rem 4rem .6rem 4rem;
           background-color: transparent;
-          border-color: #1ABC9C;
+          border-color: transparent;
           border-radius: .3rem;
           outline: none;
           color: #313030;
