@@ -13,7 +13,7 @@ const Profiler = () => (
       <button>Baixar CV</button>
     </div>
 
-    <a href='https://api.whatsapp.com/send?phone=5568999896421&text=Ol%C3%A1%2C%20tudo%20bem%3F%20Posso%20ajudar%20%3F' target='blank'>
+    <a href='https://api.whatsapp.com/send?phone=5568999896421&text=Ol%C3%A1%2C%20estava%20olhando%20seu%20portf%C3%B3lio%2C%20e%20queria%20falar%20com%20voc%C3%AA!' target='blank'>
       <AiOutlineWhatsApp size={32} />
             WhatsApp
           </a>
