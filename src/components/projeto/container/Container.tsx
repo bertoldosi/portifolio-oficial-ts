@@ -20,7 +20,7 @@ const Home = function () {
   const [repositorys, setRepositorys] = useState<Repositorys[]>()
 
   useEffect(() => {
-    api.get('/repos').then((response) => {
+    api.get('/repos?sort=pushed').then((response) => {
       setRepositorys(response.data)
     });
 

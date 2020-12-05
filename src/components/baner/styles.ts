@@ -31,6 +31,7 @@ export const BanFooter = styled.footer`
     .inputs{
       width: 50%;
       display: flex;
+      margin-bottom: 1rem;
       flex-direction: column;
       cursor: initial;
 
@@ -119,3 +120,47 @@ export const BanFooter = styled.footer`
   }
   }
 `
+export const MsgSuccess = styled.div`
+
+  h3{
+    color: #009900;
+    padding: .3rem;
+    font-weight: 400;
+  }
+
+`
+
+export const MsgError = styled.div`
+
+  h3{
+    color: red;
+    padding: .3rem;
+    font-weight: 400;
+  }
+
+`
+
+export const Loading = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+
+  .c-loader {
+    animation: is-rotating 1s infinite;
+    border: 6px solid #e5e5e5;
+    border-radius: 50%;
+    border-top-color: #1abc9c;
+    height: 50px;
+    width: 50px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+`
+

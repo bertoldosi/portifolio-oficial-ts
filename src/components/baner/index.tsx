@@ -1,21 +1,72 @@
-import React from 'react'
-import { BanFooter } from './styles'
+import React, { FormEvent, useState } from 'react'
+import api from '../../services/gmail'
+import { BanFooter, MsgSuccess, MsgError, Loading } from './styles'
 
 
 const Baner = function () {
+
+  const [nome, setNome] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [mensagem, setMensagem] = useState<string>('')
+  const [msgGmail, setmsgGmail] = useState<string>('')
+
+
+  function send(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setmsgGmail('espera')
+
+    api.post("/send", {
+      params: {
+        nome: nome,
+        email: email,
+        mensagem: mensagem
+      }
+    }).then(response => {
+      setmsgGmail('enviado')
+    })
+      .catch(response => {
+        setmsgGmail('error')
+    })
+
+    setNome('')
+    setEmail('')
+    setMensagem('')
+  }
+
   return (
     <BanFooter>
       <h1>Contate-me</h1>
-        <form>
-          <div className='inputs'>
-            <input type="text" placeholder='Seu nome'/>
-            <input type="text" placeholder='Seu email'/>
-            <textarea  placeholder='Sua mensagem'/>
-          </div>
-          <div className='btn'>
-            <a href='/'><button>Enviar</button></a>
-          </div>
-        </form>
+      <form onSubmit={send}>
+        <div className='inputs'>
+          <input
+            type="text"
+            placeholder='Seu nome'
+            value={nome}
+            onChange={e => setNome(e.target.value)}
+          />
+
+          <input
+            type="text"
+            placeholder='Seu email'
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+
+          <textarea
+            placeholder='Sua mensagem'
+            value={mensagem}
+            onChange={e => setMensagem(e.target.value)}
+          />
+
+        </div>
+        {msgGmail == 'espera' && (<Loading><div className='c-loader'></div></Loading>)}
+        {msgGmail == 'enviado' && (<MsgSuccess><h3>ENVIADO COM SUCESSO!</h3></MsgSuccess>)}
+        {msgGmail == 'error' && (<MsgError><h3>ERRO AO ENVIAR!</h3></MsgError>)}
+
+        <div className='btn'>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
     </BanFooter>
   )
 }
