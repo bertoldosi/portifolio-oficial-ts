@@ -1,9 +1,19 @@
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 
-interface ClickProps{
+interface ClickProps {
   hasClick: boolean;
 }
+export const Aviso = styled.h5`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #a64452;
+  color: white;
+  font-weight: 400;
+  padding: .2rem;
+`
 
 export const Header = styled.div<ClickProps>`
   width: 100%;
