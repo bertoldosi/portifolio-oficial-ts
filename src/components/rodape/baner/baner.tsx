@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from 'react'
-import api from '../../services/gmail'
+import api from '../../../services/gmail'
 import { BanFooter, MsgSuccess, MsgError, Loading } from './styles'
 
 
@@ -23,14 +23,14 @@ const Baner = function () {
       }
     }).then(response => {
       setmsgGmail('enviado')
+
+      setNome('')
+      setEmail('')
+      setMensagem('')
     })
       .catch(response => {
         setmsgGmail('error')
-    })
-
-    setNome('')
-    setEmail('')
-    setMensagem('')
+      })
   }
 
   return (
@@ -40,13 +40,15 @@ const Baner = function () {
         <div className='inputs'>
           <input
             type="text"
+            required
             placeholder='Seu nome'
             value={nome}
             onChange={e => setNome(e.target.value)}
           />
 
           <input
-            type="text"
+            type="email"
+            required
             placeholder='Seu email'
             value={email}
             onChange={e => setEmail(e.target.value)}
@@ -54,6 +56,7 @@ const Baner = function () {
 
           <textarea
             placeholder='Sua mensagem'
+            required
             value={mensagem}
             onChange={e => setMensagem(e.target.value)}
           />

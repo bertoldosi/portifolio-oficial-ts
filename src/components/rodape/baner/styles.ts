@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const BanFooter = styled.footer`
   width: 100%;
   height: 600px;
+  margin-top: 3rem;
   background-color: #2c3e50;
 
   display: flex;
@@ -41,6 +42,8 @@ export const BanFooter = styled.footer`
         width: 100%;
         height: 3rem;
         color: white;
+        font-family: Roboto;
+        font-weight: 300;
         border: none;
         border-bottom: .1rem solid white;
         border-radius: .1rem;
@@ -55,6 +58,7 @@ export const BanFooter = styled.footer`
         height: 5rem;
         overflow: hidden;
         resize: none;
+        font-family: Roboto;
 
         ::placeholder{
           font-family: Roboto;

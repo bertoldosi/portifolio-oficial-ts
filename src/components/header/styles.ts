@@ -6,6 +6,7 @@ interface ClickProps{
 }
 
 export const Header = styled.div<ClickProps>`
+  width: 100%;
   height: 150px;
   background-color: #2c3e50;
   display: flex;
@@ -13,6 +14,7 @@ export const Header = styled.div<ClickProps>`
   align-items: center;
   border-bottom: .3rem solid #1abc9c;
   box-shadow: 0 0 1em #2c3e50;
+
 
   padding: 1rem;
 
@@ -55,6 +57,12 @@ export const Header = styled.div<ClickProps>`
   img{
     margin-left: 8rem;
     height: 80%;
+    cursor: pointer;
+    transition: 1s;
+
+    :hover{
+      height: 85%;
+    }
   }
 
   ${(props) => props.hasClick && css`

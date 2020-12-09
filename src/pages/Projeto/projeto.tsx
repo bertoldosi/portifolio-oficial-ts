@@ -1,14 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import Header from '../../components/header/header';
-import Container from '../../components/projeto/container/Container'
-
+import React from 'react'
+import Header from '../../components/header/header'
+import PrincipalProjeto from '../../components/principal/projeto/principal_projeto'
+import Baner from '../../components/rodape/baner/baner'
+import Footer from '../../components/rodape/footer/footer'
 
 const Projeto = function () {
 
   return (
     <>
       <Header />
-      <Container />
+      <PrincipalProjeto />
+      <Baner />
+      <Footer />
     </>
   )
 }

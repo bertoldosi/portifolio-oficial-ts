@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 
 export const Container = styled.div`
-  width: 250px;
   height: min-content;
   background-color: white;
   border-radius: .5rem;
-  padding: 2rem 0 5rem 0;
-  margin: 0 1rem 1rem 1rem;
+  padding: 2rem;
+  margin: 2rem 1rem 1rem 1rem;
   box-shadow: 0 0 1em #2c3e50;
 
   div{
@@ -33,6 +32,13 @@ export const Container = styled.div`
       cursor: pointer;
       font-weight: 500;
       color: #313030;
+      transition: 1s;
+
+      :hover{
+        width: 75%;
+        padding: .6rem;
+        font-size: 1.2rem;
+      }
     }
 
   }
@@ -42,7 +48,13 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    transition: 1s;
     cursor: pointer;
+
+    :hover{
+      font-size: 1.2rem;
+      color: #1abc9c;
+    }
 
     svg{
       margin-right: .1rem;

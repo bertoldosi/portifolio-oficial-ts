@@ -36,6 +36,7 @@ export const LoginCss = styled.div`
       align-items: center;
       justify-content: center;
 
+
       .inputs{
         width: 60%;
         display: flex;
@@ -50,6 +51,7 @@ export const LoginCss = styled.div`
           height: 2rem;
           color: #313030;
           border: none;
+          cursor: text;
           border-bottom: .1rem solid #2C3E50;
         }
       }
@@ -70,6 +72,7 @@ export const LoginCss = styled.div`
 
           &:hover{
             background-color: #1ABC9C;
+            transition: 1s;
             color: white;
           }
         }
