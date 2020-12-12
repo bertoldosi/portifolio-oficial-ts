@@ -2,7 +2,7 @@
 
 ### Web
 <p align="center">
-  <img alt="Web Preview" title="Web-preview" src="https://user-images.githubusercontent.com/42129177/101989354-d7874380-3c6d-11eb-8c66-c3ca9a23f71a.png" width="800px">
+  <img alt="Web Preview" title="Web-preview" src="https://user-images.githubusercontent.com/42129177/101989625-9e4fd300-3c6f-11eb-8b55-a0e042d5cce0.gif" width="800px">
 
 ### Mobile
 <p align="center">
