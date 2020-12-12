@@ -71,4 +71,4 @@ Feito isso, abra o seu navegador e acesse `http://localhost:3000/`
 Para acessar clique em: https://bertoldosi.github.io/portifolio-oficial-ts/#/
 
 ---
-Desenvolvido por Matheus Bertoldo !
+Desenvolvido por `Matheus Bertoldo!`
