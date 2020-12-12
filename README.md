@@ -6,7 +6,7 @@
 
 ### Mobile
 <p align="center">
-  <img alt="Web Preview" title="Web-preview" src="https://user-images.githubusercontent.com/42129177/92683764-5aa89e80-f2f9-11ea-8007-00a066102453.gif" width="300px"">
+  <img alt="Web Preview" title="Web-preview" src="https://user-images.githubusercontent.com/42129177/101989488-9fcccb80-3c6e-11eb-8157-bfcbb2a1d63f.gif" width="300px"">
   
 </p>
 
