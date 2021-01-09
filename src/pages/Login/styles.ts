@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 export const LoginCss = styled.div`
   display: flex;
@@ -7,19 +6,19 @@ export const LoginCss = styled.div`
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: #2C3E50;
+  background-color: #2c3e50;
 
-  .login{
+  .login {
     width: 500px;
     height: 450px;
     background: white;
     margin: 1rem;
-    border-radius: 0 0 .3rem .3rem;
+    border-radius: 0 0 0.3rem 0.3rem;
 
-    header{
+    header {
       height: 100px;
-      border-bottom: .2rem solid #2C3E50;
-      background: #1ABC9C;
+      border-bottom: 0.2rem solid #2c3e50;
+      background: #1abc9c;
 
       display: flex;
       align-items: center;
@@ -29,49 +28,48 @@ export const LoginCss = styled.div`
       color: #313030;
     }
 
-    form{
+    form {
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
 
-
-      .inputs{
+      .inputs {
         width: 60%;
         display: flex;
         flex-direction: column;
 
-        label{
+        label {
           font-weight: 500;
-          margin: 1rem .5rem .5rem 0;
+          margin: 1rem 0.5rem 0.5rem 0;
         }
 
-        input{
+        /*input{
           height: 2rem;
           color: #313030;
           border: none;
           cursor: text;
           border-bottom: .1rem solid #2C3E50;
-        }
+        }*/
       }
 
-      .btn{
+      .btn {
         margin: 4rem;
 
-        button{
-          padding: .6rem 4rem .6rem 4rem;
+        button {
+          padding: 0.6rem 4rem 0.6rem 4rem;
           background-color: transparent;
           border-color: transparent;
-          border-radius: .3rem;
+          border-radius: 0.3rem;
           outline: none;
           color: #313030;
           font-weight: bold;
           text-decoration: none;
           cursor: pointer;
 
-          &:hover{
-            background-color: #1ABC9C;
+          &:hover {
+            background-color: #1abc9c;
             transition: 1s;
             color: white;
           }
@@ -79,4 +77,4 @@ export const LoginCss = styled.div`
       }
     }
   }
-`
+`;

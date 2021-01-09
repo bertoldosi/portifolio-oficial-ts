@@ -1,27 +1,38 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { LoginCss } from './styles'
+import React from 'react';
+import { LoginCss } from './styles';
+import { Form } from '@unform/web';
+import Input from '../../components/input';
 
-const Login = function () {
+const Login: React.FC = () => {
+  function handleSubmit(data: object): void {
+    console.log(data);
+  }
+
   return (
     <LoginCss>
-      <div className='login'>
-        <header><h1>ACESSO</h1></header>
-        <form>
-          <div className='inputs'>
+      <div className="login">
+        <header>
+          <h1>ACESSO</h1>
+        </header>
+        <Form onSubmit={handleSubmit}>
+          <div className="inputs">
             <label>LOGIN</label>
-            <input type="text" placeholder='Digite seu usuário'/>
+            <Input name="email" type="text" placeholder="Digite seu usuário" />
 
             <label>SENHA</label>
-            <input type="text"  placeholder='Digite sua senha'/>
+            <Input
+              name="password"
+              type="password"
+              placeholder="Digite sua senha"
+            />
           </div>
-          <div className='btn'>
-            <Link to='/'><button>LOGAR</button></Link>
+          <div className="btn">
+            <button type={'submit'}>LOGAR</button>
           </div>
-        </form>
+        </Form>
       </div>
     </LoginCss>
-  )
-}
+  );
+};
 
 export default Login;
