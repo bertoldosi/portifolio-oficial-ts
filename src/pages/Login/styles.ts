@@ -8,6 +8,10 @@ export const LoginCss = styled.div`
   height: 100vh;
   background-color: #2c3e50;
 
+  span {
+    color: red;
+  }
+
   .login {
     width: 500px;
     height: 450px;
@@ -44,14 +48,6 @@ export const LoginCss = styled.div`
           font-weight: 500;
           margin: 1rem 0.5rem 0.5rem 0;
         }
-
-        /*input{
-          height: 2rem;
-          color: #313030;
-          border: none;
-          cursor: text;
-          border-bottom: .1rem solid #2C3E50;
-        }*/
       }
 
       .btn {
