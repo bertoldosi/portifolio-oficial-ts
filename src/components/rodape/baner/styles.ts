@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const BanFooter = styled.footer`
   width: 100%;
@@ -10,18 +10,16 @@ export const BanFooter = styled.footer`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-shadow: 0 0 1em #2c3e50;
 
-  h1{
+  h1 {
     font-size: 2rem;
     margin: 2rem;
     color: white;
     font-weight: 500;
-    border-bottom: .2rem solid #1ABC9C;
+    border-bottom: 0.2rem solid #1abc9c;
   }
 
-
-  form{
+  form {
     width: 90%;
     height: 100%;
     display: flex;
@@ -29,14 +27,15 @@ export const BanFooter = styled.footer`
     align-items: center;
     justify-content: center;
 
-    .inputs{
+    .inputs {
       width: 50%;
       display: flex;
       margin-bottom: 1rem;
       flex-direction: column;
       cursor: initial;
 
-      input, textarea{
+      input,
+      textarea {
         background: transparent;
         margin: 2rem 0 0 0;
         width: 100%;
@@ -45,35 +44,35 @@ export const BanFooter = styled.footer`
         font-family: Roboto;
         font-weight: 300;
         border: none;
-        border-bottom: .1rem solid white;
-        border-radius: .1rem;
+        border-bottom: 0.1rem solid white;
+        border-radius: 0.1rem;
         cursor: text;
 
-        ::focus{
+        ::focus {
           background: transparent;
         }
       }
 
-      textarea{
+      textarea {
         height: 5rem;
         overflow: hidden;
         resize: none;
         font-family: Roboto;
 
-        ::placeholder{
+        ::placeholder {
           font-family: Roboto;
         }
       }
     }
 
-    .btn{
+    .btn {
       margin: 4rem;
 
-      button{
-        padding: .6rem 4rem .6rem 4rem;
-        background-color: #1ABC9C;
+      button {
+        padding: 0.6rem 4rem 0.6rem 4rem;
+        background-color: #1abc9c;
         border-color: transparent;
-        border-radius: .3rem;
+        border-radius: 0.3rem;
         outline: none;
         color: #313030;
         font-weight: bold;
@@ -81,68 +80,65 @@ export const BanFooter = styled.footer`
         cursor: pointer;
         transition: 1s;
 
-        &:hover{
-          background-color: #1ABC9C;
+        &:hover {
+          background-color: #1abc9c;
           color: white;
-          padding: .7rem 4.2rem .7rem 4.2rem;
+          padding: 0.7rem 4.2rem 0.7rem 4.2rem;
         }
       }
     }
   }
 
   @media (max-width: 720px) {
-    form{
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    .inputs{
+    form {
       width: 90%;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      cursor: initial;
+      align-items: center;
+      justify-content: center;
 
-      input, textarea{
-        background: transparent;
-        margin: 2rem 0 0 0;
-        width: 100%;
-        height: 3rem;
-        color: white;
-        border: none;
-        border-bottom: .1rem solid white;
-        border-radius: .1rem;
-        cursor: text;
+      .inputs {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        cursor: initial;
 
-        ::focus{
+        input,
+        textarea {
           background: transparent;
+          margin: 2rem 0 0 0;
+          width: 100%;
+          height: 3rem;
+          color: white;
+          border: none;
+          border-bottom: 0.1rem solid white;
+          border-radius: 0.1rem;
+          cursor: text;
+
+          ::focus {
+            background: transparent;
+          }
         }
       }
     }
   }
-  }
-`
+`;
 export const MsgSuccess = styled.div`
-
-  h3{
+  h3 {
     color: #009900;
-    padding: .3rem;
+    padding: 0.3rem;
     font-weight: 400;
   }
-
-`
+`;
 
 export const MsgError = styled.div`
-
-  h3{
+  h3 {
     color: red;
-    padding: .3rem;
+    padding: 0.3rem;
     font-weight: 400;
   }
-
-`
+`;
 
 export const Loading = styled.div`
   display: flex;
@@ -158,13 +154,11 @@ export const Loading = styled.div`
     border-top-color: #1abc9c;
     height: 50px;
     width: 50px;
-}
-
-@keyframes is-rotating {
-  to {
-    transform: rotate(1turn);
   }
-}
 
-`
-
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+`;

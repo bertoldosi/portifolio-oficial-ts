@@ -1,15 +1,14 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 export const Contexto = styled.div`
-width: 100%;
-max-width: 900px;
-padding: 2rem;
-display: flex;
-justify-content: center;
-flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-@media (max-width: 420px) {
+  @media (max-width: 420px) {
     padding: 0;
   }
 
@@ -17,57 +16,57 @@ flex-direction: column;
     padding: 0;
   }
 
-h1{
-  border-bottom: solid .1rem #2c3e50;
-}
+  h1 {
+    border-bottom: solid 0.1rem #2c3e50;
+  }
 
-@media (max-width: 1020px) {
-  width: 90%;
-}
-`
+  @media (max-width: 1020px) {
+    width: 90%;
+  }
+`;
 
 export const Card = styled.div`
   background-color: white;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   margin-bottom: 1rem;
   padding: 2rem 2rem 5rem 2rem;
-  box-shadow: 0 0 1em #2c3e50;
-  h1{
-      margin-bottom: .5rem;
+
+  h1 {
+    margin-bottom: 0.5rem;
   }
-  div{
+  div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    a{
-      padding: 0 .5rem 0 .5rem ;
+    a {
+      padding: 0 0.5rem 0 0.5rem;
       transition: 1s;
-      :hover{
+      :hover {
         background-color: #f0f0f5;
-        border-bottom: solid .2rem #1abc9c;
-        border-radius: .2rem;
+        border-bottom: solid 0.2rem #1abc9c;
+        border-radius: 0.2rem;
       }
-      h2{
+      h2 {
         margin-top: 1rem;
       }
-      p{
+      p {
         margin: 0;
         margin-bottom: 1rem;
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
     }
   }
   @media (max-width: 1020px) {
-    div{
+    div {
       grid-template-columns: 1fr;
-      a{
-      background-color: #f0f0f5;
-      border-bottom: solid .2rem #1abc9c;
-      border-radius: .2rem;
-    }
+      a {
+        background-color: #f0f0f5;
+        border-bottom: solid 0.2rem #1abc9c;
+        border-radius: 0.2rem;
+      }
     }
   }
-`
+`;
 
 export const Loading = styled.div`
   display: flex;
@@ -82,10 +81,10 @@ export const Loading = styled.div`
     border-top-color: #1abc9c;
     height: 50px;
     width: 50px;
-}
-@keyframes is-rotating {
-  to {
-    transform: rotate(1turn);
   }
-}
-`
+  @keyframes is-rotating {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+`;

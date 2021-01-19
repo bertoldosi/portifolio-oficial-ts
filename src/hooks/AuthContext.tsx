@@ -22,7 +22,8 @@ export const AuthProvider: React.FC = ({ children }) => {
       password,
     });
 
-    console.log(response.data);
+    const token = response.data;
+    localStorage.setItem('@Portifolio:token', token);
   }, []);
 
   return (
