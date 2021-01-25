@@ -5,6 +5,7 @@ import { FormHandles } from '@unform/core';
 import Input from '../../components/input';
 import * as Yup from 'yup';
 import { AuthContext } from '../../hooks/AuthContext';
+import { useHistory } from 'react-router-dom';
 
 interface Errors {
   [key: string]: string;
@@ -18,6 +19,7 @@ interface authUser {
 const Login: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const { Login } = useContext(AuthContext);
+  const history = useHistory();
 
   const handleSubmit = useCallback(
     async (data: authUser) => {
@@ -38,6 +40,8 @@ const Login: React.FC = () => {
           email: data.email,
           password: data.password,
         });
+
+        history.push('/dashboard');
       } catch (err) {
         const validationErrors: Errors = {};
         if (err instanceof Yup.ValidationError) {

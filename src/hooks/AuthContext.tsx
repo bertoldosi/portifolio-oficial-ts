@@ -1,4 +1,4 @@
-import React, { createContext, useCallback } from 'react';
+import React, { createContext, useCallback, useContext } from 'react';
 import api from '../services/api-adonis';
 
 interface LoginCredentials {
@@ -24,6 +24,8 @@ export const AuthProvider: React.FC = ({ children }) => {
 
     const token = response.data;
     localStorage.setItem('@Portifolio:token', token);
+
+    return token;
   }, []);
 
   return (
@@ -32,3 +34,6 @@ export const AuthProvider: React.FC = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
+export const isAuthenticated = () => localStorage.getItem('@Portifolio:token');
+
