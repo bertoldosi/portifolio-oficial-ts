@@ -5,8 +5,6 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import { useAuth } from '../hooks/Auth';
-
 interface RouteProps extends ReactDOMRouteProps {
   isPrivate?: boolean;
   component: React.ComponentType;
@@ -17,16 +15,21 @@ const Route: React.FC<RouteProps> = ({
   component: Component,
   ...rest
 }) => {
-  const user = useAuth();
+  const user = localStorage.getItem('@Portifolio:token');
 
   return (
     <ReactDOMRoute
       {...rest}
-      render={() => {
+      render={({ location }) => {
         return isPrivate == !!user ? (
           <Component />
         ) : (
-          <Redirect to={{ pathname: isPrivate ? '/login' : '/dashboard' }} />
+          <Redirect
+            to={{
+              pathname: isPrivate ? '/login' : '/dashboard',
+              state: { from: location },
+            }}
+          />
         );
       }}
     />

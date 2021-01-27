@@ -1,11 +1,12 @@
-import React, { useCallback, useRef, useContext } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { LoginCss } from './styles';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 import Input from '../../components/input';
 import * as Yup from 'yup';
-import { AuthContext } from '../../hooks/AuthContext';
 import { useHistory } from 'react-router-dom';
+import { useToasts } from 'react-toast-notifications';
+import api from '../../services/api-adonis';
 
 interface Errors {
   [key: string]: string;
@@ -18,8 +19,38 @@ interface authUser {
 
 const Login: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
-  const { Login } = useContext(AuthContext);
   const history = useHistory();
+  const { addToast } = useToasts();
+
+  const Logando = async (email: string, password: string) => {
+    try {
+      const response = await api.post('sessions/', {
+        email,
+        password,
+      });
+
+      if (response.status == 200) {
+        const { token } = response.data;
+
+        localStorage.setItem('@Portifolio:token', token);
+        localStorage.setItem('@Portifolio:token', token);
+
+        addToast('Login realizado com sucesso! Você será redirecionado.', {
+          appearance: 'success',
+          autoDismiss: true,
+        });
+
+        setTimeout(() => {
+          window.location.pathname = '/dashboard';
+        }, 3000);
+      }
+    } catch {
+      addToast('Ocorreu um erro ao fazer o login, cheque as credenciais.', {
+        appearance: 'error',
+        autoDismiss: true,
+      });
+    }
+  };
 
   const handleSubmit = useCallback(
     async (data: authUser) => {
@@ -32,16 +63,12 @@ const Login: React.FC = () => {
             .required('E-mail é obrigatório'),
           password: Yup.string().required('Senha é obrigatório'),
         });
+
         await schema.validate(data, {
           abortEarly: false,
         });
 
-        Login({
-          email: data.email,
-          password: data.password,
-        });
-
-        history.push('/dashboard');
+        Logando(data.email, data.password);
       } catch (err) {
         const validationErrors: Errors = {};
         if (err instanceof Yup.ValidationError) {
@@ -49,10 +76,11 @@ const Login: React.FC = () => {
             validationErrors[error.path] = error.message;
           });
           formRef.current?.setErrors(validationErrors);
+          return;
         }
       }
     },
-    [Login],
+    [Login, history],
   );
 
   return (

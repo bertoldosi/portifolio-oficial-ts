@@ -1,14 +1,18 @@
-import React, { createContext, useCallback, useContext } from 'react';
-import api from '../services/api-adonis';
+import React, { createContext, useState } from 'react';
+import { useToasts } from 'react-toast-notifications';
 
 interface LoginCredentials {
   email: string;
   password: string;
 }
 
+interface AuthState {
+  token: string;
+}
+
 interface AuthContextData {
+  token?: string;
   name: string;
-  Login(credentials: LoginCredentials): Promise<void>;
 }
 
 export const AuthContext = createContext<AuthContextData>(
@@ -16,24 +20,22 @@ export const AuthContext = createContext<AuthContextData>(
 );
 
 export const AuthProvider: React.FC = ({ children }) => {
-  const Login = useCallback(async ({ email, password }) => {
-    const response = await api.post('sessions/', {
-      email,
-      password,
-    });
+  const { addToast } = useToasts();
+  const [data, setData] = useState(() => {
+    const token = localStorage.getItem('@Portifolio:token');
 
-    const token = response.data;
-    localStorage.setItem('@Portifolio:token', token);
+    if (token) {
+      return { token };
+    }
 
     return token;
-  }, []);
+  });
 
   return (
-    <AuthContext.Provider value={{ name: 'Matheus', Login }}>
+    <AuthContext.Provider value={{ name: 'Matheus' }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
 export const isAuthenticated = () => localStorage.getItem('@Portifolio:token');
-
